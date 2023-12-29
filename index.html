@@ -6,14 +6,19 @@ layout: default
 .video-content {
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 499px) {
   #myVideo {
     height: 300px;
   }
 }
-@media only screen and (min-width: 576px) {
+@media only screen and (max-width: 500px) and (max-width: 799px) {
   #myVideo {
-    height: 600px;
+    height: 450px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #myVideo {
+    height: 700px;
   }
 }
 #myVideo {
