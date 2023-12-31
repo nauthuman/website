@@ -3,11 +3,12 @@ layout: default
 ---
 
 <style>
+
 .video-content {
 }
 
 @media only screen and (max-width: 499px) {
-  #myVideo {
+  #reel-video {
     height: 320px;
   }
   .title {
@@ -18,7 +19,7 @@ layout: default
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 799px) {
-  #myVideo {
+  #reel-video {
     height: 450px;
   }
   .title {
@@ -29,7 +30,7 @@ layout: default
   }
 }
 @media only screen and (min-width: 800px) {
-  #myVideo {
+  #reel-video {
     height: 700px;
   }
   .title {
@@ -39,7 +40,8 @@ layout: default
     font-size: 38px;
   }
 }
-#myVideo {
+
+#reel-video {
   /* video from https://ssyoutube.com/ */
   right: 0;
   top: 0;
@@ -48,19 +50,15 @@ layout: default
   transform: translate(-50%);
 }
 
-.titlex {
-  position: fixed;
-  top: 0;
-  background: transparent;
-  color: #f1f1f1;
-}
 .title {
   position: relative;
   width: 100%;
   background: transparent;
   color: #f1f1f1;
   text-align: center;
+  z-index: 1;
 }
+
 .title h1 {
   font-family: Griffy;
   padding: 0px;
@@ -69,7 +67,7 @@ layout: default
 </style>
 
 <div class="video-content">
-  <video autoplay muted loop playsinline id="myVideo">
+  <video autoplay muted loop playsinline id="reel-video">
     <source src="reel.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
