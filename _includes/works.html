@@ -28,28 +28,29 @@
     display: inline-block;
     vertical-align: top;
   }
-  div.work-cell img {
-  }
   div.work-cell p {
     color: #28282B;
     font-family: 'Viga', sans-serif;
     text-align: center;
   }
   div.work-cell a {
-    color: steelblue;
     text-decoration: none;
-    font-family: 'Viga', sans-serif;
     text-align: center;
-  }
-  div.work-cell a:hover {
-    color: whitesmoke;
-    background-color: grey;
   }
   div.work-cell-title {
     color: darkgreen;
     font-size: 16px;
     max-width: 200px;
     margin: auto;
+  }
+  /* See https://codepen.io/nxworld/pen/ZYNOBZ */
+  div.work-cell img {
+	  opacity: 1;
+	  -webkit-transition: .3s ease-in-out;
+	  transition: .3s ease-in-out;
+  }
+  div.work-cell:hover img {
+	  opacity: .5;
   }
 </style>
 
