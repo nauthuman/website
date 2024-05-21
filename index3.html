@@ -1,1 +1,81 @@
+---
+layout: default
+---
 
+<style>
+
+.video-content {
+}
+
+@media only screen and (max-width: 499px) {
+  #reel-video {
+    height: 320px;
+  }
+  .title {
+    top: -190px;
+  }
+  .title h1 {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 799px) {
+  #reel-video {
+    height: 450px;
+  }
+  .title {
+    top: -260px;
+  }
+  .title h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #reel-video {
+    height: 700px;
+  }
+  .title {
+    top: -420px;
+  }
+  .title h1 {
+    font-size: 38px;
+  }
+}
+
+#reel-video {
+  /* video from https://ssyoutube.com/ */
+  right: 0;
+  top: 0;
+  min-width: 100%; 
+  margin-left: 50vw;
+  transform: translate(-50%);
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  color: #f1f1f1;
+  text-align: center;
+  z-index: 1;
+  height: 0px;
+}
+
+.title h1 {
+  font-family: DM+Serif+Display;
+  padding: 0px;
+  margin: 0px;
+}
+</style>
+
+<div class="video-content">
+  <video autoplay muted loop playsinline id="reel-video">
+    <source src="reel.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="title">
+    <h1>NAUT HUMAN PRODUCTIONS</h1>
+  </div>
+</div>
+
+{% include pitch_panel.html %}
+{% include works2_panel.html %}
