@@ -12,10 +12,16 @@ layout: default
     height: 320px;
   }
   .title {
-    top: -190px;
+    top: -390px;
   }
   .title h1 {
-    font-size: 22px;
+    font-size: 62px;
+  }
+  .title h2 {
+    font-size: 24px;
+  }
+  .title p {
+    font-size: 4px;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 799px) {
@@ -23,10 +29,16 @@ layout: default
     height: 450px;
   }
   .title {
-    top: -260px;
+    top: -460px;
   }
   .title h1 {
-    font-size: 28px;
+    font-size: 68px;
+  }
+  .title h2 {
+    font-size: 30px;
+  }
+  .title p {
+    font-size: 10px;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -34,10 +46,16 @@ layout: default
     height: 700px;
   }
   .title {
-    top: -420px;
+    top: -620px;
   }
   .title h1 {
-    font-size: 38px;
+    font-size: 78px;
+  }
+  .title h2 {
+    font-size: 40px;
+  }
+  .title p {
+    font-size: 20px;
   }
 }
 
@@ -61,10 +79,24 @@ layout: default
 }
 
 .title h1 {
-  font-family: DM+Serif+Display;
-  padding: 0px;
-  margin: 0px;
+  font-family: "cofo-gothic-variable", sans-serif;
+  font-variation-settings: "wght" 900;
 }
+  
+.title h2 {
+  font-family: "usual", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+  
+.title p {
+  font-family: "old-claude-lp-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+img.laurel { 
+    width: 150px
+  }
 </style>
 
 <div class="video-content">
@@ -73,9 +105,12 @@ layout: default
     Your browser does not support HTML5 video.
   </video>
   <div class="title">
-    <h1>NAUT HUMAN PRODUCTIONS</h1>
+    <p>"whatever it is, it's naut human..." – every horror movie, ever</p>
+    <h1>Naut Human<br> 
+    Productions</h1> 
+    <p>award winning, full-service video production company</p>
+    <img src="{{site.url}}/images/ATLHorrorFestLaurels2.png" alt="ATL Horror Fest Laurels" class="laurel">
   </div>
 </div>
 
-{% include pitch_panel.html %}
-{% include works2_panel.html %}
+{% include works_panel.html %}
