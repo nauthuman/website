@@ -4,7 +4,6 @@
     font-family: "old-claude-lp-regular", sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
   }
 
   .topnav {
@@ -26,8 +25,12 @@
     color: black;
   }
 
-  .centered-header {
-    text-align: center;
+  .topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
 
@@ -36,10 +39,12 @@
 <header>
   <body>
       <div class="topnav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#merch">Merch</a>
-        <a href="#contact">Contact</a>
+        <div class="topnav-centered">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#merch">Merch</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
   </body>
 </header>
