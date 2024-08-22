@@ -162,6 +162,29 @@ img.laurel {
   background: #ddd;
   color: black;
 }
+
+.button {
+    background-color: #0065b1;
+    border: 3px solid #04AA6D;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Ysabeau Infant', sans-serif;
+    transition-duration: 0.4s;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+  .button:hover {
+    background-color: #04AA6D; /* Green */
+    color: white;
+  }
 </style>
 
 <div class="navbar">
@@ -180,9 +203,13 @@ img.laurel {
     <p>Leesburg's Newest <br>Haunted Attraction...</p>
     <h1>THE DRACULA<br> 
     EXPERIENCE</h1> 
-    <p>award winning, full-service stage & screen production company</p>
+    <a href="https://devignition.ticketleap.com/devignition2024/" target="_blank">
+        <button class="button">
+          Buy Tickets!
+        </button>
+    </a>
+    <p>October 17 – November 3 <br>George C. Marshall's Dodona Manor</p>
+    
   </div>
 </div>
-
-{% include works_panel.html %}
 
