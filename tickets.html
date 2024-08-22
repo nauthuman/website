@@ -1,0 +1,187 @@
+---
+layout: default
+---
+
+<style>
+
+.video-content {
+  overflow: hidden
+}
+
+@media only screen and (max-width: 499px) {
+  #reel-video {
+    height: 320px;
+  }
+  .title {
+    top: -325px;
+  }
+  .title h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .title h2 {
+    font-size: 24px;
+  }
+  .title p {
+    font-size: 13px;
+  }
+  img {
+    width: 100px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 799px) {
+  #reel-video {
+    height: 450px;
+  }
+  .title {
+    top: -440px;
+  }
+  .title h1 {
+    font-size: 60px;
+  }
+  .title h2 {
+    font-size: 30px;
+  }
+  .title p {
+    font-size: 15px;
+  }
+  img {
+    width: 120px;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1099px) {
+  #reel-video {
+    height: 700px;
+  }
+  .title {
+    top: -620px;
+  }
+  .title h1 {
+    font-size: 78px;
+  }
+  .title h2 {
+    font-size: 40px;
+  }
+  .title p {
+    font-size: 20px;
+  }
+  img {
+    width: 150px;
+  }
+}
+  @media only screen and (min-width: 1100px) {
+  #reel-video {
+    height: 900px;
+  }
+  .title {
+    top: -760px;
+  }
+  .title h1 {
+    font-size: 96px;
+  }
+  .title h2 {
+    font-size: 50px;
+  }
+  .title p {
+    font-size: 25px;
+  }
+  img {
+    width: 180px;
+  }
+}
+
+#reel-video {
+  /* video from https://ssyoutube.com/ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  top: 0;
+  min-width: 100%; 
+  margin-left: 50vw;
+  transform: translate(-50%);
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  color: #f1f1f1;
+  text-align: center;
+  z-index: 1;
+  height: 0px;
+}
+
+.title h1 {
+  font-family: "cofo-gothic-variable", sans-serif;
+  font-variation-settings: "wght" 900;
+}
+  
+.title h2 {
+  font-family: "usual", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+  
+.title p {
+  font-family: "old-claude-lp-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+img.laurel { 
+    /*width: 140px*/
+  }
+
+.navbar {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "scandia-web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: .15rem;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+</style>
+
+<div class="navbar">
+  <a href="/tickets">Tickets</a>
+  <a href="/films">Films</a>
+  <a href="/index">Home</a>
+</div>
+
+<div class="video-content">
+  <video autoplay muted loop playsinline id="reel-video">
+    <source src="DracWebsite07.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="title">
+    <h1>Ticket Sales<br> 
+    Coming Soon</h1> 
+    </a>
+    <p>Tickets will be available to purchase on September 1, 2024
+    <br>Check back then!</p>
+    
+  </div>
+</div>
