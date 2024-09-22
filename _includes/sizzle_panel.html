@@ -6,31 +6,26 @@ layout: default
 
 .video-content {
   overflow: hidden;
-  margin-bottom: -120px;
+  margin-bottom: -65px;
 }
 
 @media only screen and (max-width: 499px) {
   #reel-video {
     height: 450px;
   }
-  .sizzletitle {
+  .title {
     top: -325px;
-    padding: 20px;
-    text-align: center;
   }
-  .sizzletitle h1 {
-    font-size: 30px;
+  .title h1 {
+    font-size: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .sizzletitle h2 {
+  .title h2 {
     font-size: 24px;
   }
-  .sizzletitle p {
+  .title p {
     font-size: 13px;
-  }
-  .sizzlebutton {
-    font-size: 14px;
   }
   img {
     width: 100px;
@@ -38,24 +33,19 @@ layout: default
 }
 @media only screen and (min-width: 500px) and (max-width: 799px) {
   #reel-video {
-    height: 500px;
+    height: 450px;
   }
-  .sizzletitle {
+  .title {
     top: -440px;
-    padding: 70px;
-    text-align: center;
   }
-  .sizzletitle h1 {
-    font-size: 40px;
+  .title h1 {
+    font-size: 60px;
   }
-  .sizzletitle h2 {
+  .title h2 {
     font-size: 30px;
   }
-  .sizzletitle p {
+  .title p {
     font-size: 15px;
-  }
-  .sizzlebutton {
-    font-size: 16px;
   }
   img {
     width: 120px;
@@ -65,22 +55,17 @@ layout: default
   #reel-video {
     height: 700px;
   }
-  .sizzletitle {
+  .title {
     top: -620px;
-    padding: 100px;
-    text-align: center;
   }
-  .sizzletitle h1 {
+  .title h1 {
     font-size: 78px;
   }
-  .sizzletitle h2 {
+  .title h2 {
     font-size: 40px;
   }
-  .sizzletitle p {
+  .title p {
     font-size: 20px;
-  }
-  .sizzlebutton {
-    font-size: 21px;
   }
   img {
     width: 150px;
@@ -90,22 +75,17 @@ layout: default
   #reel-video {
     height: 900px;
   }
-  .sizzletitle {
+  .title {
     top: -760px;
-    padding: 120px;
-    text-align: center;
   }
-  .sizzletitle h1 {
+  .title h1 {
     font-size: 96px;
   }
-  .sizzletitle h2 {
+  .title h2 {
     font-size: 50px;
   }
-  .sizzletitle p {
+  .title p {
     font-size: 25px;
-  }
-  .sizzlebutton {
-    font-size: 26px;
   }
   img {
     width: 180px;
@@ -124,36 +104,37 @@ layout: default
   transform: translate(-50%);
 }
 
-.sizzletitle {
+.title {
   position: relative;
+  width: 100%;
   background: transparent;
   color: #f1f1f1;
+  text-align: center;
   z-index: 1;
   height: 0px;
 }
 
-.sizzletitle h1 {
+.title h1 {
   font-family: "cofo-gothic-variable", sans-serif;
   font-variation-settings: "wght" 900;
   letter-spacing: 1pt;
 }
   
-.sizzletitle h2 {
+.title h2 {
   font-family: "usual", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
   
-.sizzletitle p {
+.title p {
   font-family: "old-claude-lp-regular", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 img.laurel { 
     /*width: 140px*/
-  }
-
-.sizzlebutton {
+}
+.button {
     background-color: black;
     border: 3px solid darkred;
     border-radius: 4px;
@@ -168,38 +149,36 @@ img.laurel {
     font-style: normal;
     transition-duration: 0.4s;
     margin-bottom: 15px;
+    font-size: 20px;
 }
 
-  .sizzlebutton:hover {
-    background-color: darkred; /* Green */
+  .button:hover {
+    background-color: darkred; 
     color: white;
   }
 </style>
 
+<!--<div class="navbar">
+  <a href="https://nauthuman.ticketspice.com/the-dracula-experience">Tickets</a>
+  <a href="/films">Films</a>
+  <a href="/index">Home</a>
+</div>-->
 <div class="video-content">
   <video autoplay muted loop playsinline id="reel-video">
-    <source src="WebsiteSizzle04Small.mp4" type="video/mp4">
+    <source src="WebsiteSizzle05Small.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
-  <div class="sizzletitle">
-    <h1>This October</h1> 
-    <p>
-      <i>THE DRACULA EXPERIENCE</i> is an hour long theatrical experience in 
-      which the audience steps right into the middle of the story – 
-      joining Jonathan Harker as he attempts to escape Dracula's 
-      lair and survive the night!
-
-      <br> <br>
-
-      This is a walking experience that includes immersive audience 
-      interactions and scares with Dracula and his three vampire brides 
-      scattered across the Dodona Manor property, from fortune telling 
-      to potion making and more! 
-    </p>
-   <!-- <a href="/tickets" target="_blank">
-        <button class="herobutton">
-          BUY TICKETS!
+  <div class="title">
+    <h1>
+      <br>
+      A Chilling New Take on an Old Classic</h1> 
+    <p>Don't just watch the story unfold... become part of it!</p>
+    <a href="/tickets">
+        <button class="button">
+          READ MORE
         </button>
-    </a> -->
+    </a>
+    
   </div>
 </div>
+
