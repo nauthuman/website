@@ -12,6 +12,9 @@ https://codepen.io/ljc-dev/pen/zYoqbrN
   header nav a {
     display: none;
   }
+    .menu {
+    display: none;
+  }
 }
 @media only screen and (min-width: 701px) {
   header nav {
@@ -94,6 +97,15 @@ https://codepen.io/ljc-dev/pen/zYoqbrN
 
 .show-menu {
   transform: translateY(0);
+}
+header nav {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 10;
+  background: rgba(0, 0, 0, .2);
 }
 </style>
 
