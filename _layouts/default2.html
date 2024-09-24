@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+ 
+    <title>Naut Human Productions</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/images/favicon2.ico">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asul&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Griffy&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/bnm0xuj.css">
+    
+<style>
+  /* https://coolors.co/101010-474747-666666-3c0518-4a0814-580b0f-670d0b-751006-f0f0f0 */
+  
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: black;
+  }
+  /*.navbar {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 10;
+  background: rgba(0, 0, 0, .2);
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "scandia-web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: .15rem;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}*/
+</style>
+  </head>
+
+  <body>
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>
