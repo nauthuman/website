@@ -1,5 +1,101 @@
+<!--
+https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0
+similar version here:
+https://codepen.io/ljc-dev/pen/zYoqbrN
+-->
 <style>
-  .navbar {
+/* nav menu */
+@media only screen and (max-width: 700px) {
+  header nav {
+    display: none;
+  }
+  header nav a {
+    display: none;
+  }
+}
+@media only screen and (min-width: 701px) {
+  header nav {
+    float: right;
+  }
+  header nav a {
+    color: #FFFFFF; /* White */
+    font-size: 20px;
+    padding: 0px 5px 0px 0px;
+    text-decoration: none;
+  }
+  header nav a:hover {
+    color: gray;
+  }
+}
+
+/* mobile menu */
+@media only screen and (min-width: 701px) {
+  .hamburger {
+    display: none;
+  }
+  .close-icon {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .show-menu {
+    display: none;
+  }
+}
+
+.menu-item {
+  display: block;
+  margin: 2rem 4rem;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 5px;
+    right: 5px;
+    padding: 4px;
+    border: none;
+    color: white;
+    background: none;
+    cursor: pointer;
+  }
+  .hamburger:hover {
+    background: #AAAAAA;
+  }
+}
+
+.close-icon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+}
+
+.show-menu {
+  transform: translateY(0);
+}
+    .navbar {
   overflow: hidden;
   background-color: transparent;
   position: fixed; /* Set the navbar to fixed position */
@@ -8,8 +104,6 @@
   z-index: 10;
   background: rgba(0, 0, 0, .2);
 }
-
-/* Links inside the navbar */
 .navbar a {
   float: right;
   display: block;
@@ -23,9 +117,7 @@
   font-size: 18px;
   letter-spacing: .15rem;
 }
-
-/* Change background on mouse-over */
-.navbar a:hover {
+  .navbar a:hover {
   background: #ddd;
   color: black;
 }
@@ -36,7 +128,6 @@
     padding: 10px 0px 0px 20px;
   }
 </style>
-
 <header>
   <body>
     <div class="navbar">
@@ -47,5 +138,43 @@
       <a href="/films">Films</a>
       <a href="/index">Home</a>
     </div>
-  </body>
+<ul class="menu">
+  <li><a class="menu-item" href="/index">Home</a></li>
+  <li><a class="menu-item" href="/films">Films</a></li>
+  <li><a class="menu-item" href="/tickets">Tickets</a></li>
+</ul>
+<button class="hamburger">
+  <!-- material icons https://material.io/resources/icons/ -->
+  <i class="menu-icon material-icons">menu</i>
+  <i class="close-icon material-icons">close</i>
+</button>
+</body>
 </header>
+
+<script type="text/javascript">
+  const menu = document.querySelector(".menu");
+  const menuItems = document.querySelectorAll(".menu-item");
+  const hamburger= document.querySelector(".hamburger");
+  const close_icon= document.querySelector(".close-icon");
+  const menu_icon = document.querySelector(".menu-icon");
+
+function toggleMenu() {
+  if (menu.classList.contains("show-menu")) {
+    menu.classList.remove("show-menu");
+    close_icon.style.display = "none";
+    menu_icon.style.display = "block";
+  } else {
+    menu.classList.add("show-menu");
+    close_icon.style.display = "block";
+    menu_icon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
+</script>
