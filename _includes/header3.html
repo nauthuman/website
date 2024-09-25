@@ -1,0 +1,51 @@
+<style>
+  .navbar {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 10;
+  background: rgba(0, 0, 0, .2);
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "scandia-web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: .15rem;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+  div.logo {
+    float: left;
+  }
+   div.logo img {
+    padding: 10px 0px 0px 20px;
+  }
+</style>
+
+<header>
+  <body>
+    <div class="navbar">
+        <div class="logo">
+          <img src="{{site.url}}/images/NautHumanWebsiteTitle.png" alt="NHPBrand">
+        </div>
+      <a href="/tickets">Tickets</a>
+      <a href="/films">Films</a>
+      <a href="/index">Home</a>
+    </div>
+  </body>
+</header>
