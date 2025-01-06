@@ -162,6 +162,9 @@ layout: default
   font-family: "cofo-gothic-variable", sans-serif;
   font-variation-settings: "wght" 900;
   letter-spacing: 1pt;
+  animation-name: titleh1;
+  animation-duration: 8s;
+  animation-delay: 1s;
 }
   
 .title h2 {
@@ -194,12 +197,24 @@ img.laurel {
     font-style: normal;
     transition-duration: 0.4s;
     margin-bottom: 15px;
+    animation-name: indexbutton;
+    animation-duration: 10s;
+    animation-delay: 2s;
 }
 
   .indexbutton:hover {
     background-color: rgba(0, 0, 0, 0.8); 
     color: white;
   }
+
+  @keyframes titleh1 {
+  0%   {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+  @keyframes indexbutton {
+  0%   {opacity: 0%;}
+  100% {opacity: 100%;}
+}
 </style>
 
 <div class="sizzlevideo-content">
