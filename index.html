@@ -11,7 +11,7 @@ layout: default
 
 @media only screen and (max-width: 499px) {
   #reel-video {
-    height: 450px;
+    height: 600px;
   }
   .title {
     top: -445px;
@@ -28,16 +28,16 @@ layout: default
   .title p {
     font-size: 13px;
   }
-  .button {
-    font-size: 12px;
+  .indexbutton {
+    font-size: 11px;
   }
   img {
-    width: 100px;
+    width: 150px;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 799px) {
   #reel-video {
-    height: 500px;
+    height: 600px;
   }
   .title {
     top: -500px;
@@ -53,11 +53,11 @@ layout: default
   .title p {
     font-size: 15px;
   }
-  .button {
-    font-size: 16px;
+  .indexbutton {
+    font-size: 14px;
   }
   img {
-    width: 120px;
+    width: 150px;
   }
 }
 @media only screen and (min-width: 800px) and (max-width: 1099px) {
@@ -70,6 +70,7 @@ layout: default
   }
   .title h1 {
     font-size: 78px;
+    margin-top: 110px;
   }
   .title h2 {
     font-size: 40px;
@@ -77,23 +78,24 @@ layout: default
   .title p {
     font-size: 20px;
   }
-  .button {
-    font-size: 21px;
+  .indexbutton {
+    font-size: 18px;
   }
   img {
     width: 150px;
   }
 }
-  @media only screen and (min-width: 1100px) {
+   @media only screen and (min-width: 1100px) and (max-width: 1699px) {
   #reel-video {
     height: 900px;
   }
   .title {
-    top: -825px;
-    padding: 50px;
+    top: -760px;
+    margin-left: 60px;
   }
   .title h1 {
     font-size: 96px;
+    margin-top: 125px;
   }
   .title h2 {
     font-size: 50px;
@@ -101,8 +103,34 @@ layout: default
   .title p {
     font-size: 25px;
   }
-  .button {
-    font-size: 26px;
+  .indexbutton {
+    font-size: 21px;
+  }
+  img {
+    width: 180px;
+  }
+}
+  @media only screen and (min-width: 1700px) {
+  #reel-video {
+    height: 1100px;
+    margin-top: auto;
+  }
+  .title {
+    top: -760px;
+    margin-left: 60px;
+  }
+  .title h1 {
+    font-size: 106px;
+    margin-top: auto;
+  }
+  .title h2 {
+    font-size: 50px;
+  }
+  .title p {
+    font-size: 25px;
+  }
+  .indexbutton {
+    font-size: 23px;
   }
   img {
     width: 180px;
@@ -134,6 +162,8 @@ layout: default
   font-family: "cofo-gothic-variable", sans-serif;
   font-variation-settings: "wght" 900;
   letter-spacing: 1pt;
+  animation-name: titleh1;
+  animation-duration: 6s;
 }
   
 .title h2 {
@@ -151,9 +181,9 @@ img.laurel {
     /*width: 140px*/
   }
 
-.button {
-    background-color: black;
-    border: 3px solid darkred;
+.indexbutton {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid white;
     border-radius: 4px;
     color: white;
     padding: 15px 32px;
@@ -166,33 +196,43 @@ img.laurel {
     font-style: normal;
     transition-duration: 0.4s;
     margin-bottom: 15px;
+    animation-name: indexbutton;
+    animation-duration: 10s;
 }
 
-  .button:hover {
-    background-color: darkred; 
+  .indexbutton:hover {
+    background-color: rgba(0, 0, 0, 1); 
     color: white;
   }
+
+  @keyframes titleh1 {
+  0%   {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+  @keyframes indexbutton {
+  0%   {opacity: 0%;}
+  100% {opacity: 100%;}
+}
 </style>
 
 <div class="sizzlevideo-content">
   <video autoplay muted loop playsinline id="reel-video">
-    <source src="DracWebsite07.mp4" type="video/mp4">
+    <source src="FinalShrunkSizzleReel.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
   <div class="title">
-    <p>Loudoun's newest haunted attraction was a hit!</p>
-    <h1>The DRACULA<br> 
-    Experience</h1> 
+    <!--<p>Loudoun's newest haunted attraction was a hit!</p>-->
+    <h1>Dive Into<br> 
+    Immersive<br>Experiences</h1> 
     <!--<p>A new monster classic will rise from the dead next October...</p>-->
-    <a href="/tickets" target="_blank">
-        <button class="button">
-          READ MORE!
+ <a href="#works2_panel">
+        <button class="indexbutton">
+          EXPLORE MORE
         </button>
     </a>
-    <p>George C. Marshall's Dodona Manor<br>Leesburg, Virginia</p>
+    <!--<p>George C. Marshall's Dodona Manor<br>Leesburg, Virginia</p>-->
     
   </div>
 </div>
 
-{% include sizzle_panel.html %}
-{% include hero_panel.html %}
+{% include works2_panel.html %}
