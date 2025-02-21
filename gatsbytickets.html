@@ -161,7 +161,7 @@ img.laurel {
 }
 .button {
     background-color: black;
-    border: 3px solid darkred;
+    border: 3px solid orange;
     border-radius: 4px;
     color: white;
     padding: 15px 32px;
@@ -178,7 +178,7 @@ img.laurel {
 }
 
   .button:hover {
-    background-color: darkred; 
+    background-color: orange; 
     color: white;
   }
 </style>
@@ -190,19 +190,21 @@ img.laurel {
 </div>-->
 <div class="video-content">
   <video autoplay muted loop playsinline id="reel-video">
-    <source src="/videos/GatsbyComingSoon.mp5" type="video/mp4">
+    <source src="/videos/GatsbyComingSoon.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
   <div class="title">
     <h1>
       <br>
       The Great Gatsby<br>Experience</h1> 
-    <p>May 29 – June 15, 2025<br><br>George C. Marshall's <br>Dodona Manor, Leesburg, VA<br><br><br>Stay tuned, more info on ticket sales and show details will be coming soon!</p>
-   <!-- <a href="#ticketinfo_panel">
+    <p>You've received the hottest invitation in town...</p>
+    <a href="#gatsbyticketinfo_panel">
         <button class="button">
           READ MORE
         </button>
-    </a>-->
+    </a>
     
   </div>
 </div>
+
+{% include gatsbyticketinfo_panel.html %}
