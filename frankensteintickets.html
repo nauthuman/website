@@ -4,6 +4,10 @@ layout: default
 
 <style>
 
+  html {
+  scroll-behavior: smooth;
+ }
+
 .video-content {
   overflow: hidden;
   margin-bottom: -65px;
@@ -143,6 +147,7 @@ layout: default
   font-family: "cofo-gothic-variable", sans-serif;
   font-variation-settings: "wght" 900;
   letter-spacing: 1pt;
+  text-shadow: 0 0 3px black;
 }
   
 .title h2 {
@@ -190,14 +195,14 @@ img.laurel {
 </div>-->
 <div class="video-content">
 <video autoplay muted loop playsinline id="reel-video">
-    <source src="/videos/FrankensteinComingSoon.mp5" type="video/mp4">
+    <source src="/videos/FrankensteinComingSoon.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
   <div class="title">
     <h1>
       <br>
       The Frankenstein<br>Experience</h1> 
-    <p>October 2 – November 2, 2025<br><br>George C. Marshall's <br>Dodona Manor, Leesburg, VA<br><br>Stay tuned, more info on ticket sales and show details will be coming soon!</p>
+    <p>October 2 – November 2, 2025<br><br>George C. Marshall's <br>Dodona Manor, Leesburg, VA<br><br>Stay tuned, more info on ticket sales will be coming soon!</p>
    <!-- <a href="#ticketinfo_panel">
         <button class="button">
           READ MORE
@@ -206,3 +211,5 @@ img.laurel {
     
   </div>
 </div>
+
+{% include frankensteinticketinfo_panel.html %}
