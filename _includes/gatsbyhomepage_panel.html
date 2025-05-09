@@ -1,0 +1,210 @@
+---
+layout: default
+---
+
+<style>
+
+.video-content {
+  overflow: hidden;
+  margin-bottom: -120px;
+}
+
+@media only screen and (max-width: 499px) {
+  #reel-video {
+    height: 450px;
+  }
+  .herotitle {
+    top: -425px;
+    padding: 20px;
+    text-align: center;
+  }
+  .herotitle h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .herotitle h2 {
+    font-size: 24px;
+  }
+  .herotitle p {
+    font-size: 13px;
+  }
+  .herobutton {
+    font-size: 14px;
+  }
+  img {
+    width: 100px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 799px) {
+  #reel-video {
+    height: 500px;
+  }
+  .herotitle {
+    top: -500px;
+    padding: 70px;
+    text-align: center;
+  }
+  .herotitle h1 {
+    font-size: 40px;
+  }
+  .herotitle h2 {
+    font-size: 30px;
+  }
+  .herotitle p {
+    font-size: 15px;
+  }
+  .herobutton {
+    font-size: 16px;
+  }
+  img {
+    width: 120px;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1099px) {
+  #reel-video {
+    height: 700px;
+  }
+  .herotitle {
+    top: -700px;
+    width: 50%;
+    padding: 10px;
+    text-align: left;
+    margin-left: 37%;
+  }
+  .herotitle h1 {
+    font-size: 78px;
+  }
+  .herotitle h2 {
+    font-size: 40px;
+  }
+  .herotitle p {
+    font-size: 20px;
+  }
+  .herobutton {
+    font-size: 21px;
+  }
+  img {
+    width: 150px;
+  }
+}
+  @media only screen and (min-width: 1100px) {
+  #reel-video {
+    height: 900px;
+  }
+  .herotitle {
+    top: -875px;
+    width: 50%;
+    padding: 30px;
+    text-align: left;
+    margin-left: 40%;
+  }
+  .herotitle h1 {
+    font-size: 96px;
+  }
+  .herotitle h2 {
+    font-size: 50px;
+  }
+  .herotitle p {
+    font-size: 25px;
+  }
+  .herobutton {
+    font-size: 26px;
+  }
+  img {
+    width: 180px;
+  }
+}
+
+#reel-video {
+  /* video from https://ssyoutube.com/ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  top: 0;
+  min-width: 100%; 
+  margin-left: 50vw;
+  transform: translate(-50%);
+}
+
+.herotitle {
+  position: relative;
+  background: transparent;
+  color: #f1f1f1;
+  z-index: 1;
+  height: 0px;
+}
+
+.herotitle h1 {
+  font-family: "cofo-gothic-variable", sans-serif;
+  font-variation-settings: "wght" 900;
+  letter-spacing: 1pt;
+}
+  
+.herotitle h2 {
+  font-family: "usual", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+  
+.herotitle p {
+  font-family: "old-claude-lp-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+img.laurel { 
+    /*width: 140px*/
+  }
+
+.herobutton {
+    background-color: black;
+    border: 3px solid darkred;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: "old-claude-lp-regular", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition-duration: 0.4s;
+    margin-bottom: 15px;
+}
+
+  .herobutton:hover {
+    background-color: darkred; /* Green */
+    color: white;
+  }
+</style>
+
+<div class="video-content">
+  <video autoplay muted loop playsinline id="reel-video">
+    <source src="HeroPanelBackground02.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="herotitle">
+    <h1>This October</h1> 
+    <p>
+      <i>THE DRACULA EXPERIENCE</i> is an outdoor hour long walking experience 
+      that includes immersive scenes, audience interactions, and scares with Dracula 
+      and his three vampire brides scattered across the Dodona Manor property, 
+      from fortune telling to potion making and more! 
+      <br> <br>
+      This bold new take puts audiences right in the middle of the story – 
+      join Jonathan Harker as he attempts to escape Dracula's lair and survive the night!
+    </p>
+      <a href="/tickets">
+        <button class="herobutton">
+          READ MORE!
+        </button>
+      </a>
+   <!-- <a href="/tickets" target="_blank">
+        <button class="herobutton">
+          BUY TICKETS!
+        </button>
+    </a> -->
+  </div>
+</div>
