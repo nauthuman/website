@@ -4,45 +4,148 @@ layout: default
 
 <style>
 
-.video-content {
+html {
+  scroll-behavior: smooth;
+ }
+
+.sizzlevideo-content {
+  overflow: hidden;
+  margin-bottom: -120px;
 }
 
 @media only screen and (max-width: 499px) {
   #reel-video {
-    height: 320px;
+    height: 600px;
   }
   .title {
-    top: -190px;
+    top: -445px;
+    padding: 20px;
   }
   .title h1 {
-    font-size: 22px;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .title h2 {
+    font-size: 24px;
+  }
+  .title p {
+    font-size: 13px;
+  }
+  .indexbutton {
+    font-size: 11px;
+  }
+  img {
+    width: 150px;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 799px) {
   #reel-video {
-    height: 450px;
+    height: 600px;
   }
   .title {
-    top: -260px;
+    top: -500px;
+    padding: 50px;
+    margin: 0px;
   }
   .title h1 {
-    font-size: 28px;
+    font-size: 60px;
+  }
+  .title h2 {
+    font-size: 30px;
+  }
+  .title p {
+    font-size: 15px;
+  }
+  .indexbutton {
+    font-size: 14px;
+  }
+  img {
+    width: 150px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) and (max-width: 1099px) {
   #reel-video {
     height: 700px;
   }
   .title {
-    top: -420px;
+    top: -690px;
+    padding: 50px;
   }
   .title h1 {
-    font-size: 38px;
+    font-size: 78px;
+    margin-top: 110px;
+  }
+  .title h2 {
+    font-size: 40px;
+  }
+  .title p {
+    font-size: 20px;
+  }
+  .indexbutton {
+    font-size: 18px;
+  }
+  img {
+    width: 150px;
+  }
+}
+   @media only screen and (min-width: 1100px) and (max-width: 1699px) {
+  #reel-video {
+    height: 900px;
+  }
+  .title {
+    top: -760px;
+    margin-left: 60px;
+  }
+  .title h1 {
+    font-size: 96px;
+    margin-top: 125px;
+  }
+  .title h2 {
+    font-size: 50px;
+  }
+  .title p {
+    font-size: 25px;
+  }
+  .indexbutton {
+    font-size: 21px;
+  }
+  img {
+    width: 180px;
+  }
+}
+  @media only screen and (min-width: 1700px) {
+  #reel-video {
+    height: 1100px;
+    margin-top: auto;
+  }
+  .title {
+    top: -760px;
+    margin-left: 60px;
+  }
+  .title h1 {
+    font-size: 106px;
+    margin-top: auto;
+  }
+  .title h2 {
+    font-size: 50px;
+  }
+  .title p {
+    font-size: 25px;
+  }
+  .indexbutton {
+    font-size: 23px;
+  }
+  img {
+    width: 180px;
   }
 }
 
 #reel-video {
   /* video from https://ssyoutube.com/ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   right: 0;
   top: 0;
   min-width: 100%; 
@@ -55,57 +158,88 @@ layout: default
   width: 100%;
   background: transparent;
   color: #f1f1f1;
-  text-align: center;
   z-index: 1;
   height: 0px;
 }
 
 .title h1 {
-  font-family: DM+Serif+Display;
-  padding: 0px;
-  margin: 0px;
+  font-family: "cofo-gothic-variable", sans-serif;
+  font-variation-settings: "wght" 900;
+  letter-spacing: 1pt;
+  animation-name: titleh1;
+  animation-duration: 6s;
+}
+  
+.title h2 {
+  font-family: "usual", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+  
+.title p {
+  font-family: "old-claude-lp-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+img.laurel { 
+    /*width: 140px*/
+  }
+
+.indexbutton {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid white;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: "old-claude-lp-regular", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition-duration: 0.4s;
+    margin-bottom: 15px;
+    animation-name: indexbutton;
+    animation-duration: 10s;
 }
 
-  .navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-}
+  .indexbutton:hover {
+    background-color: rgba(0, 0, 0, 1); 
+    color: white;
+  }
 
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  @keyframes titleh1 {
+  0%   {opacity: 0%;}
+  100% {opacity: 100%;}
 }
-
-/* Change background on mouse-over */
-.navbar a:hover {
-  background: #ddd;
-  color: black;
+  @keyframes indexbutton {
+  0%   {opacity: 0%;}
+  100% {opacity: 100%;}
 }
 </style>
 
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<div class="video-content">
+<div class="sizzlevideo-content">
   <video autoplay muted loop playsinline id="reel-video">
-    <source src="reel.mp4" type="video/mp4">
+    <source src="/videos/GatsbyAndDraculaSizzleReelOGSmall.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
   <div class="title">
-    <h1>NAUT HUMAN PRODUCTIONS</h1>
+    <!--<p>Loudoun's newest haunted attraction was a hit!</p>-->
+    <h1>Dive Into<br> 
+    Immersive<br>Experiences</h1> 
+ <!--<p>Up Next: The Great Gatsby Experience
+   <br> May 29th – June 15th
+   <br>Dodona Manor, Leesburg, Virginia
+ </p>-->
+ <a href="/gatsbytickets">
+        <button class="indexbutton">
+          BUY TICKETS
+        </button>
+    </a>
+   <!--<p>George C. Marshall's Dodona Manor<br>Leesburg, Virginia</p>-->
+    
   </div>
 </div>
 
-{% include pitch_panel.html %}
 {% include works2_panel.html %}
