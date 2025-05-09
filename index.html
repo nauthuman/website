@@ -4,10 +4,6 @@ layout: default
 
 <style>
 
-html {
-  scroll-behavior: smooth;
- }
-
 .sizzlevideo-content {
   overflow: hidden;
   margin-bottom: -120px;
@@ -221,25 +217,23 @@ img.laurel {
 
 <div class="sizzlevideo-content">
   <video autoplay muted loop playsinline id="reel-video">
-    <source src="/videos/GatsbyAndDraculaSizzleReelOGSmall.mp4" type="video/mp4">
+    <source src="GatsbyAndDraculaSizzleReelOGSmall.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
   <div class="title">
     <!--<p>Loudoun's newest haunted attraction was a hit!</p>-->
     <h1>Dive Into<br> 
     Immersive<br>Experiences</h1> 
- <!--<p>Up Next: The Great Gatsby Experience
-   <br> May 29th – June 15th
-   <br>Dodona Manor, Leesburg, Virginia
- </p>-->
- <a href="/gatsbytickets">
+    <!--<p>A new monster classic will rise from the dead next October...</p>-->
+ <a href="#works2_panel">
         <button class="indexbutton">
-          BUY TICKETS
+          EXPLORE MORE
         </button>
     </a>
-   <!--<p>George C. Marshall's Dodona Manor<br>Leesburg, Virginia</p>-->
+    <!--<p>George C. Marshall's Dodona Manor<br>Leesburg, Virginia</p>-->
     
   </div>
 </div>
 
+{% include gatsbyhomepage_panel.html %}
 {% include works2_panel.html %}
