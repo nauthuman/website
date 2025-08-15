@@ -1,0 +1,232 @@
+---
+layout: default
+---
+
+<style>
+
+  html {
+  scroll-behavior: smooth;
+ }
+
+.explorevideo-content {
+  overflow: hidden;
+  margin-bottom: -120px;
+}
+
+@media only screen and (max-width: 499px) {
+  #explore-video {
+    height: 600px;
+  }
+  .exploretitle {
+    top: -445px;
+    padding: 20px;
+  }
+  .exploretitle h1 {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .exploretitle h2 {
+    font-size: 24px;
+  }
+  .exploretitle p {
+    font-size: 13px;
+  }
+  .exploreindexbutton {
+    font-size: 11px;
+  }
+  img {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 799px) {
+  #explore-video {
+    height: 600px;
+  }
+  .exploretitle {
+    top: -500px;
+    padding: 50px;
+    margin: 0px;
+  }
+  .exploretitle h1 {
+    font-size: 60px;
+  }
+  .exploretitle h2 {
+    font-size: 30px;
+  }
+  .exploretitle p {
+    font-size: 15px;
+  }
+  .exploreindexbutton {
+    font-size: 14px;
+  }
+  img {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1099px) {
+  #explore-video {
+    height: 700px;
+  }
+  .exploretitle {
+    top: -690px;
+    padding: 50px;
+  }
+  .exploretitle h1 {
+    font-size: 78px;
+    margin-top: 110px;
+  }
+  .exploretitle h2 {
+    font-size: 40px;
+  }
+  .exploretitle p {
+    font-size: 20px;
+  }
+  .exploreindexbutton {
+    font-size: 18px;
+  }
+  img {
+    width: 150px;
+  }
+}
+   @media only screen and (min-width: 1100px) and (max-width: 1699px) {
+  #explore-video {
+    height: 900px;
+  }
+  .exploretitle {
+    top: -760px;
+    margin-left: 60px;
+  }
+  .exploretitle h1 {
+    font-size: 96px;
+    margin-top: 125px;
+  }
+  .exploretitle h2 {
+    font-size: 50px;
+  }
+  .exploretitle p {
+    font-size: 25px;
+  }
+  .exploreindexbutton {
+    font-size: 21px;
+  }
+  img {
+    width: 180px;
+  }
+}
+  @media only screen and (min-width: 1700px) {
+  #explore-video {
+    height: 1100px;
+    margin-top: auto;
+  }
+  .exploretitle {
+    top: -760px;
+    margin-left: 60px;
+  }
+  .exploretitle h1 {
+    font-size: 106px;
+    margin-top: auto;
+  }
+  .exploretitle h2 {
+    font-size: 50px;
+  }
+  .exploretitle p {
+    font-size: 25px;
+  }
+  .exploreindexbutton {
+    font-size: 23px;
+  }
+  img {
+    width: 180px;
+  }
+}
+
+#explore-video {
+  /* video from https://ssyoutube.com/ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  top: 0;
+  min-width: 100%; 
+  margin-left: 50vw;
+  transform: translate(-50%);
+}
+
+.exploretitle {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  color: #f1f1f1;
+  z-index: 1;
+  height: 0px;
+}
+
+.exploretitle h1 {
+  font-family: "cofo-gothic-variable", sans-serif;
+  font-variation-settings: "wght" 900;
+  letter-spacing: 1pt;
+  animation-name: titleh1;
+  animation-duration: 6s;
+}
+  
+.exploretitle h2 {
+  font-family: "usual", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+  
+.exploretitle p {
+  font-family: "old-claude-lp-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+img.laurel { 
+    /*width: 140px*/
+  }
+
+.explorebutton {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid white;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: "old-claude-lp-regular", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition-duration: 0.4s;
+    margin-bottom: 15px;
+    animation-name: indexbutton;
+    animation-duration: 10s;
+}
+
+  .explorebutton:hover {
+    background-color: rgba(0, 0, 0, 1); 
+    color: white;
+  }
+
+</style>
+
+<div class="explorevideo-content">
+  <video autoplay muted loop playsinline id="explore-video">
+    <source src="/videos/gatsby/GatsbyWebCut01.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="exploretitle">
+    <!--<p>Loudoun's newest haunted attraction was a hit!</p>-->
+    <h1>Dive Into<br> 
+    Immersive<br>Experiences</h1> 
+    <!--<p>A new monster classic will rise from the dead next October...</p>-->
+ <a href="#works2_panel">
+        <button class="explorebutton">
+          EXPLORE MORE
+        </button>
+    </a>
+    <!--<p>George C. Marshall's Dodona Manor<br>Leesburg, Virginia</p>-->
+    
+  </div>
+</div>
